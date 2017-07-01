@@ -1,6 +1,8 @@
 # iOS-Stereoscopic-ARKit-Template
 iOS Augmented Reality App template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with cheap mobile VR headsets* .
 
+![Snapshot of a left-eye view and right-eye view of ARKit Scenekit](snapshot.jpg)
+
 Language: Swift
 Content Technology: SceneKit.
 
@@ -15,7 +17,7 @@ Note: The background camera feed will appear as a flat background.
 
 Note: This is experimental code running on beta software that is likely to change. Apple may also provide a function for this in the future (e.g. via SCNHeadMountedDisplayRenderingTechnique, MDLStereoscopicCamera) hinted at by [Steve T-S' finding](https://twitter.com/stroughtonsmith/status/776740802869460992) .
 
-## Steps
+## Steps Taken
 
 ### 1. Two ARSceneViews
 
