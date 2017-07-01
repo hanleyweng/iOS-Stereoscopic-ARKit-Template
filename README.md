@@ -25,9 +25,11 @@ Put two ARSceneViews next to each other in storyboard.
 
 Connect the second ARSceneView to the ViewController
 
-```@IBOutlet weak var sceneView: ARSCNView!
+```
+@IBOutlet weak var sceneView: ARSCNView!
 
-@IBOutlet weak var sceneView2: ARSCNView!```
+@IBOutlet weak var sceneView2: ARSCNView!
+```
 
 Turn it on sceneView2 in viewDidLoad()
 
@@ -35,7 +37,8 @@ Turn it on sceneView2 in viewDidLoad()
     sceneView2.scene = scene
     sceneView2.showsStatistics = sceneView.showsStatistics
     sceneView2.isPlaying = true
-}```
+}
+```
 
 ### 3. Update RightEye every frame.
 
