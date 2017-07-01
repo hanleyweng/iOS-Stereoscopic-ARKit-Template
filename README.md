@@ -1,5 +1,5 @@
 # iOS-Stereoscopic-ARKit-Template
-iOS Augmented Reality App template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with cheap mobile VR headsets* .
+Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with cheap mobile VR headsets* .
 
 ![Snapshot of a left-eye view and right-eye view of ARKit Scenekit](snapshot.jpg)
 
