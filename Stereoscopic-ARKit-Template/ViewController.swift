@@ -85,4 +85,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    // UPDATE EVERY FRAME:
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        DispatchQueue.main.async {
+            self.updateFrame()
+        }
+    }
+    
+    func updateFrame() {
+        
+        // Clone pointOfView for Second View
+        let pointOfView : SCNNode = (sceneView.pointOfView?.clone())!
+        sceneView2.pointOfView = pointOfView
+        
+    }
 }
