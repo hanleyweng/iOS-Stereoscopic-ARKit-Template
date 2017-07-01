@@ -11,9 +11,10 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
-    // @IBOutlet var sceneView: ARSCNView!
+    
     @IBOutlet weak var sceneView: ARSCNView!
+    
+    @IBOutlet weak var sceneView2: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        // Set up SceneView2 (Right Eye)
+        sceneView2.scene = scene
+        sceneView2.showsStatistics = sceneView.showsStatistics
+        sceneView2.isPlaying = true // Turn on isPlaying to ensure this ARSCNView recieves updates.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
