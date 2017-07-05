@@ -1,21 +1,27 @@
 # iOS-Stereoscopic-ARKit-Template
-Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with cheap mobile VR headsets* .
+Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with mobile VR/AR headsets* .
 
 ![Snapshot of a left-eye view and right-eye view of ARKit Scenekit](snapshot.jpg)
 
 Language: Swift
+
 Content Technology: SceneKit.
 
 Written in: Xcode 9 beta 2 (9M137d)
+
 Tested on: iPhone 7+ running iOS 11 beta 2 (15A5404i)
 
 ## Footnotes
 
-\* Mobile Headset needs to have an opening for the iPhone's camera (i.e. headset supports Mixed Reality or Augmented Reality). You could also use a Google Cardboard with a hole cut out.
+\* Mobile Headset needs to have an opening for the iPhone's camera (i.e. a headset that supports Mixed Reality or Augmented Reality). You could also use a Google Cardboard with a hole cut out.
 
-Note: The background camera feed will appear as a flat background.
+Notes:
 
-Note: This is experimental code running on beta software that is likely to change. Apple may also provide a function for this in the future (e.g. via SCNHeadMountedDisplayRenderingTechnique, MDLStereoscopicCamera) hinted at by [Steve T-S' finding](https://twitter.com/stroughtonsmith/status/776740802869460992) .
+* The background camera feed will appear as a flat background. 
+
+* Note: The image will also appear quite 'zoomed in' in actual use-case. This is due to the narrow horizontal FOV of the cropped camera (~30° here), and the hardware camera [(~60°)](https://developer.apple.com/library/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Cameras/Cameras.html). The human eye has a FOV of ~ 114°. In future, absent hardware changes, a rendering of a larger fieldOfView (resulting in a view akin to Hololens) would make more sense (ideally supplemented with 3D Mesh capture).
+
+* Note: This is experimental code running on beta software that is likely to change. Apple may also provide a function for this in the future (e.g. see SCNHeadMountedDisplayRenderingTechnique, MDLStereoscopicCamera) as tweeted by <a href="https://twitter.com/stroughtonsmith/status/776740802869460992" target="_blank">Steve T-S</a>.
 
 ## Steps Taken
 
@@ -83,3 +89,7 @@ Add calculations for the right-eye positon in updateFrame()
     pointOfView.position.y += rotatedEyePosSCNV.y * mag
     pointOfView.position.z += rotatedEyePosSCNV.z * mag
 ```
+
+### Done!
+
+Have fun! 😁
