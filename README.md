@@ -1,5 +1,7 @@
 # iOS-Stereoscopic-ARKit-Template
-Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with mobile VR/AR headsets* .
+Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with mobile VR/AR headsets* (note: the FOV is narrow) .
+
+__UPDATE: For a wider FOV see ["ARKit Headset View"](https://github.com/hanleyweng/iOS-ARKit-Headset-View). Note: This is a less elegant (and more 'beta-code') template.__
 
 ![Snapshot of a left-eye view and right-eye view of ARKit Scenekit](snapshot.jpg)
 
@@ -19,7 +21,9 @@ Notes:
 
 * The background camera feed will appear as a flat background. 
 
-* Note: The image will also appear quite 'zoomed in' in actual use-case. This is due to the narrow horizontal FOV of the cropped camera (~30° here), and the hardware camera [(~60°)](https://developer.apple.com/library/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Cameras/Cameras.html). The human eye has a FOV of ~ 114°. In future, absent hardware changes, a rendering of a larger fieldOfView (resulting in a view akin to Hololens) would make more sense (ideally supplemented with 3D Mesh capture).
+* Note: The image will also appear 'zoomed in'. This is due to the narrow horizontal FOV of the cropped camera (~38.5° ± 2° here), and the hardware camera [(~60°)](https://developer.apple.com/library/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Cameras/Cameras.html). The human eye has a FOV of ~ 114°. In future rendering of a larger fieldOfView (resulting in a view akin to Hololens) would make more sense. For a (less elegant) implementation of a larger fieldOfView see ["iOS ARKit Headset View"](https://github.com/hanleyweng/iOS-ARKit-Headset-View).
+
+* As of 2017-07 (iPhone7 era), the refresh rate of all mobile screens (iPhone, Android, Samsung Gear VR) are hardware-limited to a maximum of 60 FPS. Unfortunately, the higher displayed FPS seen here is a glitch, caused by the fact that the sceneView is rendered twice. For reference, the minimum framerates of the Oculus and HTC Vive is 90 FPS. The 2017 iPad Pro 10.5" (with ProMotion Display) is able to achieve 120FPS.
 
 * Note: This is experimental code running on beta software that is likely to change. Apple may also provide a function for this in the future (e.g. see SCNHeadMountedDisplayRenderingTechnique, MDLStereoscopicCamera) as tweeted by <a href="https://twitter.com/stroughtonsmith/status/776740802869460992" target="_blank">Steve T-S</a>.
 
