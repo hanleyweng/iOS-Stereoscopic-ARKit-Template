@@ -1,7 +1,8 @@
 # iOS Stereoscopic ARKit Template
-Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with mobile VR/AR headsets* (note: the FOV is narrow) .
 
-__UPDATE: For a wider and adjustable FOV see project: ["ARKit Headset View"](https://github.com/hanleyweng/iOS-ARKit-Headset-View). Note, "ARKit Headset View" is a less elegant (and more 'beta code') template.__
+__UPDATE (2017-12): The most up to date (more advanced and customizable version of this project) can now be found ["here"](https://github.com/hanleyweng/iOS-ARKit-Headset-View)__
+
+Xcode's 'Augmented Reality App' template, modified to support a basic stereoscopic (two side-by-side camera) view. A few lines of code (and storyboard tweaks) to make your ARKit experiment compatible with mobile VR/AR headsets* (note: the FOV is narrow) .
 
 ![Snapshot of a left-eye view and right-eye view of ARKit Scenekit](snapshot.jpg)
 
